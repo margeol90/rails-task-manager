@@ -1,0 +1,10 @@
+<div class="col-6">
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field(:title, {:class => 'form-control'}) %>
+    <%= f.label :details %>
+    <%= f.text_field(:details, {:class => 'form-control'}) %>
+    <label><%= f.check_box :completed %>Completed</label>
+    <%= f.submit ({:class => 'btn btn-primary mt-2'})%>
+  <% end %>
+</div>

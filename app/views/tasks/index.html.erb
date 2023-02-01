@@ -1,0 +1,17 @@
+<h1>Tasks</h1>
+
+<div class="card">
+  <% @tasks.each do |task|%>
+    <p>
+      <% if task.completed %>
+        <i class="fa-sharp fa-solid fa-circle-check"></i>
+      <% else %>
+        <i class="fa-solid fa-circle"></i>
+      <% end %>
+      <%= link_to task.title, task_path(task) %>
+    </p>
+  <% end %>
+</div>
+
+
+<%= link_to "➕ Add new task", "tasks/new" %>
